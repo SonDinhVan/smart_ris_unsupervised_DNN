@@ -1,0 +1,73 @@
+# Configurations
+# Code structure
+
+# Paths
+path:
+  # Path to training data 
+  path_to_train_data: './training_data/1_CHs_180_phases_500000_samples.pickle'
+  # Path to folder containing DNN model and DataNormalizer
+  path_to_model: '../models/1_CHs_180_phases_500000_samples'
+# Constant parameters
+constant:
+  # Speed of light (m/s)
+  c: 300000000.0
+  # Noise figure (dBm)
+  N0: -174.0
+
+# Channel related parameters. This should be kept unchanged
+channel:
+  # Standard shadow (dB)
+  # Paper link: E. Tanghe et. al 
+  # “The industrial indoor channel: large-scale and temporal fading at 900, 2400, and 5200 MHz,”
+  # IEEE Trans. Wireless. Communs., vol. 7, no. 7, pp. 2740–2751, 2008.
+  standard_shadow_db: 8.13
+  # noise power (dB)
+  noise_power: -130.4
+
+# System model related parameters
+system_model:
+  # Main frequency (GHz)
+  f: 2.45
+  # Band width (MHz)
+  B: 10.
+  # Parameters of RIS
+  RIS:
+    # Number of phase elements
+    num_phase: 100
+    # x-coordinator
+    x_ris: 0.
+    # y-coordinator
+    y_ris: 0.
+
+  # Parameters of BS
+  BS:
+    # Transmit power (dBm)
+    P: 30.0
+    # Minimum transmit power (dBm)
+    P_min: 0.
+    # Maximum transmit power (dBm)
+    P_max: 40.
+    # x-coordinator
+    x_bs: 0.
+    # y-coordinator
+    y_bs: -10.
+
+  # Parameters of cluster head
+  CH:
+    # Nummber of clusters
+    K: 1
+
+# Deep Learning
+DNN:
+  # batch size
+  batch_size: 40
+  # learning rate
+  learning_rate: 0.001
+  # number of epochs
+  num_epochs: 100
+  # number of tensor each layer
+  num_tensors: [250, 250]
+  # L2 regularization
+  l2: 0.01
+  # Dropout rate
+  drop_out_rate: 0.8
