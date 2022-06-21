@@ -6,5 +6,5 @@ Two algorithms are developed:
 
 - Refer to module/ml_model.py for Unsupervised DNN algorithm
 - Refer to module/riemannian.py for Riemannian Conjugate Gradient
-- 
+
 Do not forget to install the entire package before use.
