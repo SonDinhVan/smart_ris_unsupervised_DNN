@@ -7,3 +7,7 @@
 - Two algorithms are developed: For Unsupervised DNN, refer to module/ml_model.py; and for Riemannian Conjugate Gradient, refer to module/riemannian.py
 
 - Do not forget to install the entire package before use via: "pip install -e. "
+
+- To train DNN, locate "notebooks/train_DNN.ipynb"
+
+- For a simple performance test, locate "notebooks/run_DNN_vs_Optimal_single_user.ipynb"
